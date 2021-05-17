@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Bifrost.Core</AssemblyName>
+    <RootNamespace>Bifrost.Core</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Magnus Månsson</Authors>
+    <Company>Eveby IT</Company>
+    <Product>Ginnungagap - Bifrost</Product>
+    <Description>Domain objects and interfaces for Bifrost</Description>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Integrations\**" />
+    <EmbeddedResource Remove="Integrations\**" />
+    <None Remove="Integrations\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="serilog" Version="2.10.0" />
+    <PackageReference Include="system.threading.tasks.parallel" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.Core\Common.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Bifrost.IntegrationTests</AssemblyName>
+    <RootNamespace>Bifrost.IntegrationTests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="fluentassertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.ApplicationServices.Sql\Common.ApplicationServices.Sql.csproj" />
+    <ProjectReference Include="..\..\Common\Common.Core\Common.Core.csproj" />
+    <ProjectReference Include="..\Bifrost.Connector.SqlDatabase\Bifrost.Connector.SqlDatabase.csproj" />
+    <ProjectReference Include="..\Bifrost.Connector.Web\Bifrost.Connector.Web.csproj" />
+    <ProjectReference Include="..\Bifrost.Core\Bifrost.Core.csproj" />
+    <ProjectReference Include="..\Bifrost.Data.Sql\Bifrost.Data.Sql.csproj" />
+    <ProjectReference Include="..\Bifrost.Dto\Bifrost.Dto.csproj" />
+    <ProjectReference Include="..\Bifrost.Integration.Solr\Bifrost.Integration.Solr.csproj" />
+    <ProjectReference Include="..\Bifrost.RestClient\Bifrost.RestClient.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

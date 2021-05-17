@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Bifrost.Dto</AssemblyName>
+    <RootNamespace>Bifrost.Dto</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Magnus Månsson</Authors>
+    <Company>Eveby IT</Company>
+    <Product>Ginnungagap - Bifrost</Product>
+    <Description>Domain transfer for Asgard</Description>
+    <Copyright>Eveby IT 2017</Copyright>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+</Project>

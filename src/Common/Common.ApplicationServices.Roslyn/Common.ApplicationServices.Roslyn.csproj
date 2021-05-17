@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Ginnungagap.Common.ApplicationServices.Roslyn</AssemblyName>
+    <RootNamespace>Ginnungagap.Common.ApplicationServices.Roslyn</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>Implementation for document processing using the Roslyn compiler</Description>
+    <Product>Ginnungagap.Common</Product>
+    <Company>Eveby IT</Company>
+    <Authors>Magnus Månsson</Authors>
+    <PackageTags>Ginnungagap common processing roslyn</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Scripts\DefaultScript.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\DefaultScript.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.9.0" />
+    <PackageReference Include="serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+version: '2'
+services:
+    sqlserver:
+        image: asgard-sqlserver
+        build:
+          context: .
+          dockerfile: data/Dockerfile
+        ports:
+          - "1433:1433"
+        volumes:
+         - mssqldata:/var/opt/mssql
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1        
+        ports:
+            - 9200:9200
+            - 9300:9300
+        environment:
+            discovery.type: single-node
+            xpack.security.enabled: "false"
+volumes:
+  mssqldata:

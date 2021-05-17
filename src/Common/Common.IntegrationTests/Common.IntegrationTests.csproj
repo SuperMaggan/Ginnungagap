@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Ginnungagap.Common.IntegrationTests</AssemblyName>
+    <RootNamespace>Ginnungagap.Common.IntegrationTests</RootNamespace>
+    <PackageId>Ginnungagap.Common.IntegrationTests</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Scripts\Data\BrokenScript.cs" />
+    <Compile Remove="Scripts\Data\RegexScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Testdata\Binary\.Net search architecture.vsd" />
+    <None Remove="Testdata\Binary\Findwise presentation - Hades.pptx" />
+    <None Remove="Testdata\Binary\Hades.docx" />
+    <None Remove="Testdata\Binary\HadesCustomer data flow.png" />
+    <None Remove="Testdata\Binary\Presentation with image.ppt" />
+    <None Remove="Testdata\Binary\Presentation1.ppt" />
+    <None Remove="Testdata\Binary\Styx architecture.jpg" />
+    <None Remove="Testdata\Binary\Styx.docx" />
+    <None Remove="Testdata\Binary\test.pdf" />
+    <None Remove="Testdata\Binary\tux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Data\BrokenScript.cs" />
+    <EmbeddedResource Include="Scripts\Data\RegexScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Testdata\Binary\.Net search architecture.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\Findwise presentation - Hades.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\Hades.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\HadesCustomer data flow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\Presentation with image.ppt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\Presentation1.ppt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\Styx architecture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\Styx.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\test.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testdata\Binary\tux.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.ApplicationServices.Roslyn\Common.ApplicationServices.Roslyn.csproj" />
+    <ProjectReference Include="..\Common.ApplicationServices.Sql\Common.ApplicationServices.Sql.csproj" />
+    <ProjectReference Include="..\Common.ApplicationServices.Tika\Common.ApplicationServices.Tika.csproj" />
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

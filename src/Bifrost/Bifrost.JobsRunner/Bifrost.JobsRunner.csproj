@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Bifrost.JobsRunner</AssemblyName>
+    <RootNamespace>Bifrost.JobsRunner</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="run_sqlexpress.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Build_docker_image.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Build_docker_image_and_push.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="out\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="out\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="out\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="data\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="data\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="data\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.ApplicationServices.Tika\Common.ApplicationServices.Tika.csproj" />
+    <ProjectReference Include="..\Bifrost.Connector.SqlDatabase\Bifrost.Connector.SqlDatabase.csproj" />
+    <ProjectReference Include="..\Bifrost.Connector.Web\Bifrost.Connector.Web.csproj" />
+    <ProjectReference Include="..\Bifrost.Core\Bifrost.Core.csproj" />
+    <ProjectReference Include="..\Bifrost.Data.Sql\Bifrost.Data.Sql.csproj" />
+    <ProjectReference Include="..\Bifrost.QuartzIntegration\Bifrost.QuartzIntegration.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETCore.App" Version="2.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Ginnungagap.Common.ApplicationServices.Sql</AssemblyName>
+    <RootNamespace>Ginnungagap.Common.ApplicationServices.Sql</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Magnus Månsson</Authors>
+    <Company>Eveby IT</Company>
+    <Product>Common sql impl</Product>
+    <PackageId>Ginnungagap.Common.ApplicationServices.Sql</PackageId>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Description>Sql implementations of data interfaces</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="serilog" Version="2.10.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj" />
+  </ItemGroup>
+</Project>

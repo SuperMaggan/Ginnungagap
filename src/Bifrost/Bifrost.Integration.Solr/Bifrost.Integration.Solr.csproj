@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Magnus Månsson</Authors>
+    <Company>Eveby IT</Company>
+    <Product>Asgard - Asgard</Product>
+    <Description>Integration to Solr. Used by Asgard to send documents directly to Solr</Description>
+    <Copyright>Eveby IT 2017</Copyright>
+    <AssemblyName>Bifrost.Integration.Solr</AssemblyName>
+    <RootNamespace>Bifrost.Integration.Solr</RootNamespace>
+    <PackageId>Bifrost.Integration.Solr</PackageId>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.Core\Common.Core.csproj" />
+    <ProjectReference Include="..\Bifrost.Core\Bifrost.Core.csproj" />
+  </ItemGroup>
+
+</Project>

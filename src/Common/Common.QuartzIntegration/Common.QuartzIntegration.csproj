@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Ginnungagap.Common.QuartzIntegration</AssemblyName>
+    <RootNamespace>Ginnungagap.Common.QuartzIntegration</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Magnus Månsson</Authors>
+    <Company>Eveby IT</Company>
+    <Product>common Quartz impl</Product>
+    <PackageId>Ginnungagap.Common.QuartzIntegration</PackageId>
+    <Version>1.0.0</Version>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+	  <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extras.Quartz" Version="7.1.0" />
+    <PackageReference Include="quartz" Version="3.3.2" />
+    <PackageReference Include="Quartz.Jobs" Version="3.3.2" />
+    <PackageReference Include="serilog" Version="2.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj" />
+  </ItemGroup>
+</Project>

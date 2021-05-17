@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Ginnungagap.Common.Tests</AssemblyName>
+    <RootNamespace>Ginnungagap.Common.Tests</RootNamespace>
+    <PackageId>Ginnungagap.Common.Tests</PackageId>
+    <Authors>Magnus Månsson</Authors>
+    <Company>Bifrost.Common.Tests</Company>
+    <Product>Ginnungagap</Product>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Scripts\Data\BrokenScript.cs" />
+    <Compile Remove="Scripts\Data\RegexScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Data\BrokenScript.cs" />
+    <EmbeddedResource Include="Scripts\Data\RegexScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Data\RegexScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="moq" Version="4.16.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.ApplicationServices.Roslyn\Common.ApplicationServices.Roslyn.csproj" />
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj" />
+    <ProjectReference Include="..\Common.QuartzIntegration\Common.QuartzIntegration.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+</Project>
